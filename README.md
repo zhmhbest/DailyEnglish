@@ -1,2 +1,4 @@
 # DailyEnglish
-背单词背单词
+
+- [View Notes](https://zhmhbest.github.io/DailyEnglish/notes)
+- [View Repository](https://github.com/zhmhbest/DailyEnglish)

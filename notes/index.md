@@ -4,3 +4,4 @@
 
 - [day 1](01.html)
 - [day 2](02.html)
+- [day 3](03.html)

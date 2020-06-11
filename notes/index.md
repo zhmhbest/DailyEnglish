@@ -2,8 +2,28 @@
 
 # [每日英语](https://github.com/zhmhbest/DailyEnglish)
 
-- [day 1](01.html)
-- [day 2](02.html)
-- [day 3](03.html)
-- [day 4](04.html)
-- [day 5](05.html)
+[TOC]
+
+## day1
+
+@import "./data/01.csv"
+
+## day2
+
+@import "./data/02.csv"
+
+## day3
+
+@import "./data/03.csv"
+
+## day4
+
+@import "./data/04.csv"
+
+## day5
+
+@import "./data/05.csv"
+
+## day6
+
+@import "./data/06.csv"

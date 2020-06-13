@@ -24,3 +24,6 @@
 
 ## day7
 @import "./data/07.csv"
+
+## day8
+@import "./data/08.csv"

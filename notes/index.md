@@ -33,3 +33,6 @@
 
 ## day10
 @import "./data/10.csv"
+
+## day11
+@import "./data/11.csv"

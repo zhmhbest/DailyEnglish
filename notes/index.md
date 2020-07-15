@@ -59,3 +59,7 @@
 ## day14
 
 @import "./data/14.csv"
+
+## day15
+
+@import "./data/15.csv"

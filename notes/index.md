@@ -79,3 +79,11 @@
 ## day19
 
 @import "./data/19.csv"
+
+## day20
+
+@import "./data/20.csv"
+
+## day21
+
+@import "./data/21.csv"

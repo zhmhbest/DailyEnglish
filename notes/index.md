@@ -87,3 +87,7 @@
 ## day21
 
 @import "./data/21.csv"
+
+## day22
+
+@import "./data/22.csv"

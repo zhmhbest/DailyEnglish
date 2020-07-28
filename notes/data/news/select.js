@@ -49,8 +49,8 @@ const onLinkClick = (() => {
     return (url) => {
         const loadingTask = pdfjsLib.getDocument({
             url: url,
-            cMapUrl: 'https://unpkg.com/pdfjs-dist@2.0.943/cmaps/', // 引入pdf.js的字体
-            cMapPacked: true
+            // cMapUrl: 'https://unpkg.com/pdfjs-dist@2.0.943/cmaps/', // 引入pdf.js的字体
+            // cMapPacked: true
         });
         loadingTask.promise.then((pdf) => {
             loadPDF(pdf);

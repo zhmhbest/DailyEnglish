@@ -4,6 +4,8 @@
 import numpy as np
 import pandas as pd
 import os
+os.chdir(os.path.dirname(__file__))
+
 
 if __name__ == '__main__':
     buffer = np.array([[None, None]])
@@ -15,7 +17,7 @@ if __name__ == '__main__':
     df = pd.DataFrame(buffer, columns=['v', 't']).drop(0)
 
     # 按字母表排序
-    df.sort_values('v', inplace=True)
+    # df.sort_values('v', inplace=True)
 
     # 去除重复单词（保留第一次出现）
     df.drop_duplicates(subset='v', inplace=True)

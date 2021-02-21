@@ -22,4 +22,4 @@ if __name__ == '__main__':
     # 去除重复单词（保留第一次出现）
     df.drop_duplicates(subset='v', inplace=True)
 
-    df.to_csv('./index.csv', index=False, header=['单词', '解释'])
+    df.to_csv('./index.csv', index=False, header=['单词', '解释'], encoding='utf-8-sig')

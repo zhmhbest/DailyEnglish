@@ -6,6 +6,8 @@ const progressTitle = document.querySelector('#progressTitle') as HTMLSpanElemen
 const progressBar = document.querySelector('#progressBar') as HTMLProgressElement;
 const messageTips = document.querySelector('#messageTips') as HTMLPreElement;
 const messageResult = document.querySelector('#messageResult') as HTMLPreElement;
+const player = document.querySelector('#player') as HTMLAudioElement;
+
 zhmh.ajax.get("assets/manifest.json", "json").then(res => {
     zhmh.form.setSelectOptions(menuSelect, res);
     // console.log(res);
@@ -29,6 +31,11 @@ function setProgressAuto() {
     progressBar.max = currentPracticeSum;
 }
 function setMessageTips(s: string) {
+    if(null !== s.match(/^[a-zA-Z ]+$/)) {
+        // type=0 美音 | type=1 英音
+        player.src = `http://dict.youdao.com/dictvoice?type=0&audio=${s.trim()}`;
+        // console.log(player.networkState);
+    }
     messageTips.innerText = s;
 }
 function setMessageResult(s: string) {
@@ -42,6 +49,7 @@ declare global {
         onMenuChange: () => void,
         onButtonPre: () => void,
         onButtonNxt: () => void,
+        onMsgClick: () => void,
         onHintNeed: () => void,
     }
 }
@@ -52,6 +60,7 @@ window.onload = function() {
     window.onMenuChange = function () {
         setMessageResult("");
         currentItem = undefined;
+        currentPractice = undefined;
 
         if (menuSelect.value.length > 0) {
             zhmh.ajax.get(menuSelect.value, "text").then(res => {

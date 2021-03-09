@@ -5,10 +5,10 @@
     },
     {
         "title": "Vocabulary",
-        "value": "assets/vocabulary/index.csv"
+        "value": "assets/vocabulary/index.pcsv"
     },
     {
         "title": "Translate",
-        "value": "assets/translate/index.csv"
+        "value": "assets/translate/index.pcsv"
     }
 ]

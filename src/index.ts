@@ -87,7 +87,7 @@ window.onload = function() {
             currentPracticeIndex--;
             const index = currentPracticeIndex - 1;
             //
-            currentItem = currentPractice[index].split(',');
+            currentItem = currentPractice[index].split('|');
             setMessageTips(currentItem[0]);
             setProgressAuto();
         }
@@ -99,7 +99,7 @@ window.onload = function() {
             const index = currentPracticeIndex;
             currentPracticeIndex++;
             //
-            currentItem = currentPractice[index].split(',');
+            currentItem = currentPractice[index].split('|');
             setMessageTips(currentItem[0]);
             setProgressAuto();
         }

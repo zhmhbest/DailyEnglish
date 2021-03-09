@@ -1,0 +1,14 @@
+[
+    {
+        "title": "None",
+        "value": ""
+    },
+    {
+        "title": "Vocabulary",
+        "value": "assets/vocabulary/index.csv"
+    },
+    {
+        "title": "Translate",
+        "value": "assets/translate/index.csv"
+    }
+]

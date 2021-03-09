@@ -59,6 +59,7 @@ window.onload = function() {
 
     window.onMenuChange = function () {
         setMessageResult("");
+        player.src = "";
         currentItem = undefined;
         currentPractice = undefined;
 
@@ -101,6 +102,11 @@ window.onload = function() {
             currentItem = currentPractice[index].split(',');
             setMessageTips(currentItem[0]);
             setProgressAuto();
+        }
+    };
+    window.onMsgClick = function() {
+        if (1 === player.networkState) {
+            player.play();
         }
     };
     window.onHintNeed = function() {

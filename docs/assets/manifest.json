@@ -4,8 +4,12 @@
         "value": ""
     },
     {
-        "title": "Vocabulary",
-        "value": "assets/vocabulary/index.pcsv"
+        "title": "Vocabulary 01",
+        "value": "assets/vocabulary/01.pcsv"
+    },
+    {
+        "title": "Vocabulary 02",
+        "value": "assets/vocabulary/02.pcsv"
     },
     {
         "title": "Translate",

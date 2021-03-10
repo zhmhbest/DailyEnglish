@@ -30,16 +30,20 @@ function setProgressAuto() {
     progressBar.value = currentPracticeIndex;
     progressBar.max = currentPracticeSum;
 }
-function setMessageTips(s: string) {
-    if(null !== s.match(/^[a-zA-Z ]+$/)) {
+function palySound(s: string) {
+    if (null !== s.match(/^[,\-a-zA-Z ]+$/)) {
         // type=0 美音 | type=1 英音
         player.src = `http://dict.youdao.com/dictvoice?type=0&audio=${s.trim()}`;
         // console.log(player.networkState);
     }
-    messageTips.innerText = s;
+}
+function setMessageTips(s: string) {
+    palySound(s);
+    messageTips.innerHTML = s;
 }
 function setMessageResult(s: string) {
-    messageResult.innerText = s;
+    palySound(s);
+    messageResult.innerHTML = s;
 }
 
 
@@ -54,7 +58,7 @@ declare global {
     }
 }
 window.onload = function() {
-    setMessageTips("--- None ---");
+    setMessageTips("<span style='color: hotpink'>None</span>");
     setProgressTitle("NaN", "NaN");
 
     window.onMenuChange = function () {
@@ -68,14 +72,14 @@ window.onload = function() {
                 const lines = (res.split("\n") as Array<string>).sort((a: string, b: string) => {
                     return Math.random() > 0.5 ? -1 : 1;
                 });
-                setMessageTips("--- Start ---");
+                setMessageTips("<span style='color: hotpink'>Ready</span>");
                 currentPracticeIndex = 0;
                 currentPracticeSum = lines.length;
                 currentPractice = lines;
                 setProgressAuto();
             });
         } else {
-            setMessageTips("--- None ---");
+            setMessageTips("<span style='color: hotpink'>None</span>");
             setProgress(-1, -1);
             setProgressTitle("NaN", "NaN");
         }

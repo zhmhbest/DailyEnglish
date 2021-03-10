@@ -31,7 +31,10 @@ function setProgressAuto() {
     progressBar.max = currentPracticeSum;
 }
 function palySound(s: string) {
-    if (null !== s.match(/^[,\-a-zA-Z ]+$/)) {
+    s = s.replace(/\/|、/g, ',');
+    s = s.replace(/(\.\.\.)|\(|\)/g, '');
+    console.log(s);
+    if (null !== s.match(/^[\-,a-zA-Z ]+$/)) {
         // type=0 美音 | type=1 英音
         player.src = `http://dict.youdao.com/dictvoice?type=0&audio=${s.trim()}`;
         // console.log(player.networkState);

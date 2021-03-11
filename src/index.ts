@@ -5,7 +5,8 @@ const menuSelect = document.querySelector('#menu') as HTMLSelectElement;
 const progressTitle = document.querySelector('#progressTitle') as HTMLSpanElement;
 const progressBar = document.querySelector('#progressBar') as HTMLProgressElement;
 const messageTips = document.querySelector('#messageTips') as HTMLPreElement;
-const messageResult = document.querySelector('#messageResult') as HTMLPreElement;
+const messageResult = document.querySelector('#messageResult') as HTMLTextAreaElement;
+// const messageText = document.querySelector('#messageText') as HTMLInputElement;
 const player = document.querySelector('#player') as HTMLAudioElement;
 
 zhmh.ajax.get("assets/manifest.json", "json").then(res => {
@@ -31,10 +32,10 @@ function setProgressAuto() {
     progressBar.max = currentPracticeSum;
 }
 function palySound(s: string) {
-    s = s.replace(/\/|、/g, ',');
+    s = s.replace(/\/|、/g, ';');
     s = s.replace(/(\.\.\.)|\(|\)/g, '');
-    console.log(s);
-    if (null !== s.match(/^[\-,a-zA-Z ]+$/)) {
+    // console.log(s);
+    if (null !== s.match(/^[\-';,a-zA-Z ]+$/)) {
         // type=0 美音 | type=1 英音
         player.src = `http://dict.youdao.com/dictvoice?type=0&audio=${s.trim()}`;
         // console.log(player.networkState);
@@ -45,8 +46,14 @@ function setMessageTips(s: string) {
     messageTips.innerHTML = s;
 }
 function setMessageResult(s: string) {
-    palySound(s);
-    messageResult.innerHTML = s;
+    if(0 === s.length) {
+        messageResult.value = s;
+        return;
+    }
+    if (0 === messageResult.value.length) {
+        messageResult.value = s;
+        palySound(s);
+    }
 }
 
 

@@ -12,7 +12,11 @@
         "value": "assets/vocabulary/02.pcsv"
     },
     {
-        "title": "Translate",
-        "value": "assets/translate/index.pcsv"
+        "title": "Translate 01",
+        "value": "assets/translate/01.pcsv"
+    },
+    {
+        "title": "Translate 02",
+        "value": "assets/translate/02.pcsv"
     }
 ]

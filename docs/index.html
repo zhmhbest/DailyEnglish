@@ -3,7 +3,7 @@
                 color: azure;
                 font-size: 180%;
             }
-            input, pre, select, button, div {
+            input, textarea, pre, select, button, div {
                 background-color: #333;
                 color: #BBB;
                 width: 100%;
@@ -11,4 +11,4 @@
             }
             progress {
                 width: 100%;
-            }</style></head><body><audio id=player autoplay><!-- controls --></audio><!-- 选择器 --><div><select id=menu onchange=onMenuChange(this)></select></div><!-- 进度条 --><div><div style="text-align: center"><span id=progressTitle></span></div><progress draggable=false value=0 id=progressBar></progress></div><!-- 说明 --><div><p id=messageTips style="min-height: 80px; background-color: rgb(96, 104, 109);" onclick=onMsgClick()></p><p id=messageResult style="min-height: 120px; background-color: rgb(45, 107, 92);" onclick=onHintNeed()></p></div><!-- 按钮 --><div style="display: flex;"><button style="width: 50%;" onclick=onButtonPre()>Previous</button> <button style="width: 50%;" onclick=onButtonNxt()>Next</button></div><script src=index.js></script></body></html>
+            }</style></head><body><audio id=player autoplay><!-- controls --></audio><!-- 选择器 --><div><select id=menu onchange=onMenuChange(this)></select></div><!-- 进度条 --><div><div style="text-align: center"><span id=progressTitle></span></div><progress draggable=false value=0 id=progressBar></progress></div><!-- 说明 --><div><p id=messageTips style="min-height: 80px;" onclick=onMsgClick()></p><textarea id=messageResult style="min-height: 120px; background-color: #444; margin-bottom: 1em; border: none;" onclick=onHintNeed()></textarea></div><!-- 按钮 --><div style="display: flex;"><button style="width: 50%;" onclick=onButtonPre()>Previous</button> <button style="width: 50%;" onclick=onButtonNxt()>Next</button></div><script src=index.js></script></body></html>

@@ -22,5 +22,9 @@
     {
         "title": "Translate 03",
         "value": "assets/translate/03.pcsv"
+    },
+    {
+        "title": "Translate 04",
+        "value": "assets/translate/04.pcsv"
     }
 ]

@@ -12,6 +12,10 @@
         "value": "assets/vocabulary/02.pcsv"
     },
     {
+        "title": "Vocabulary GXY",
+        "value": "assets/vocabulary/gxy.pcsv"
+    },
+    {
         "title": "Translate 01",
         "value": "assets/translate/01.pcsv"
     },
@@ -38,5 +42,9 @@
     {
         "title": "Translate 07",
         "value": "assets/translate/07.pcsv"
+    },
+    {
+        "title": "Translate 08",
+        "value": "assets/translate/08.pcsv"
     }
 ]

@@ -4,6 +4,10 @@
         "value": ""
     },
     {
+        "title": "Reading 01",
+        "value": "assets/reading/01.pcsv"
+    },
+    {
         "title": "Vocabulary 01",
         "value": "assets/vocabulary/01.pcsv"
     },

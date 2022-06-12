@@ -13,7 +13,7 @@ module.exports = {
         index: './src/index.ts'
     },
     output: {
-        path: path.resolve(root, 'out'),
+        path: path.resolve(root, 'docs'),
         filename: '[name].js'
     },
 
